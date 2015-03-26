@@ -95,6 +95,7 @@ public class UserActions {
         this.closeOverlay(10);
         WebDriverWait wait = new WebDriverWait(driver, 480);
 
+        Thread.sleep(1000L);
         List<WebElement> allPhotos = driver.findElements(By.className("file_preview_box"));
         for (WebElement photo : allPhotos) {
             photo.click();

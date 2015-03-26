@@ -1,10 +1,7 @@
-C:\Users\mcsere\SharalikeSample\0.jpg
-C:\Users\mcsere\SharalikeSample\1.jpg
 C:\Users\Public\Pictures\Sample Pictures\Chrysanthemum.jpg
 C:\Users\Public\Pictures\Sample Pictures\Desert.jpg
 C:\Users\Public\Pictures\Sample Pictures\Hydrangeas.jpg
 C:\Users\Public\Pictures\Sample Pictures\Jellyfish.jpg
-C:\Users\Public\Pictures\Sample Pictures\Koala - Copy.jpg
 C:\Users\Public\Pictures\Sample Pictures\Koala.jpg
 C:\Users\Public\Pictures\Sample Pictures\Lighthouse.jpg
 C:\Users\Public\Pictures\Sample Pictures\Penguins.jpg

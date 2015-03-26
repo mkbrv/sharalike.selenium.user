@@ -70,7 +70,7 @@ public class Main {
             userActions.register();
             userActions.createFirstAlbum(imageList);
             userActions.createFirstSmartShow();
-            Thread.sleep(50000L);
+            Thread.sleep(5000L);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
