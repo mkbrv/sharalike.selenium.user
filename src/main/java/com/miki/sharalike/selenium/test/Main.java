@@ -31,10 +31,15 @@ public class Main {
             }
         }
 
+
         for (int i = 0; i < howManyTimesToRun; i++) {
             System.out.println("STARTING SERIES NUMBER : " + i);
             readConfig();
-            start();
+            try {
+                start();
+            } catch (Exception e) {
+                //i hate selenium
+            }
         }
         System.exit(0);
     }
@@ -57,25 +62,23 @@ public class Main {
     }
 
     public static UserActions generateUser(WebDriver driver) {
-        return new UserActions(driver, "miki" + System.currentTimeMillis() + new Random().nextInt(100) + "@miki.com", "secret");
+        return new UserActions(driver, "miki" + System.currentTimeMillis() + new Random().nextInt(100) + "@miki.com", "secret", imageList);
     }
 
     public static void start() throws Exception {
         WebDriver driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         try {
             // And now use this to visit Google
             driver.get(String.valueOf(prop.get("target.server")));
             UserActions userActions = generateUser(driver);
-            userActions.register();
-            userActions.createFirstAlbum(imageList);
-            userActions.createFirstSmartShow();
-            Thread.sleep(5000L);
+            userActions.start();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             driver.close();
         }
+        Thread.sleep(5000L);
     }
 
 }
