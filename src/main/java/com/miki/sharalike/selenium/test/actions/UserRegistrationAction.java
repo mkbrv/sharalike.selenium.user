@@ -37,7 +37,7 @@ public class UserRegistrationAction extends AbstractAction implements IAction {
         signUpBtn.click();
         LOG.info(this.getActionName() + ": User has signed up: " + user);
         this.waitForPage("/albums", 1000L);
-        this.clickElement("overlay_close_message", 250L);
+        this.clickElement("overlay_close_message", 1000L);
         return true;
     }
 

@@ -28,9 +28,10 @@ public class CreateAlbumAction extends AbstractAction implements IAction {
 
     @Override
     protected boolean actualAction() throws InterruptedException {
+        this.clickElement("overlay_close_message", 20L);
         driver.findElement(By.className("albums_upload")).click();
         StringBuilder uploadPicture = new StringBuilder();
-
+        Thread.sleep(1000L);
         Long start = System.currentTimeMillis();
         for (int i = 0; i < pictures.size(); i++) {
             uploadPicture.append(pictures.get(i));
