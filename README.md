@@ -30,7 +30,7 @@ web.driver.location =D:\\_Sharalike\\chromedriver.exe
 Maven run: 
 mvn clean install exec:java -Dexec.args="1"
 
-The argument represents the number of concurrent users.
+The argument represents the number of serial users.
 
 Windows bat files:
 
@@ -38,11 +38,11 @@ Windows bat files:
 
 run.bat 10 
 
-where 10 represents the number of concurrent users.
+where 10 represents the number of serial  users.
 
 ## 2.
 parallel-run.bat 2 3 
 
-where 2 represents the number of parallel users and 3 the number of concurrent users.
+where 2 represents the number of parallel users and 3 the number of serial  users.
 
 
